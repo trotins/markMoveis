@@ -51,7 +51,10 @@ function App(props) {
           </button>
           {showGoBack ? (<img id="goBack" alt="goBack" src={goBack} onMouseDown={() => {
             setShowResults(false);
-            setShowTop10Ano(false)
+            setShowTop10Ano(false);
+            setAno("by Year");
+            setColor("");
+            setShowGoBack(false);
             }} />): (<div></div>)}
         </div>
         {showTop10Ano ? (

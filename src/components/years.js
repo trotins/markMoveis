@@ -16,6 +16,7 @@ export function Years(props) {
     props.revenueYear(false);
     props.resultados(true);
     props.top10(false);
+    props.goBack(true)
     props.anoEscolhido(value);
   };
 

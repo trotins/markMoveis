@@ -31,5 +31,12 @@ button{
   border-style: solid;
   border-width: 1px;
   border-color: #78849E;
-  margin-right: 16px ;
+  margin-right: 12px ;
+}
+#clicked{
+  background-color:#00BAFF;
+  color:#012433;
+}
+#goBack{
+  vertical-align: middle;
 }

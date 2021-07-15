@@ -1,0 +1,74 @@
+
+/* Table com tudo feito */
+#contentTable {
+  width: 75%;
+  height: 255px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+#contentTable.top10 {
+  overflow-y: hidden;
+}
+#titles {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 10px;
+  color: #0b749b;
+  word-spacing: 0;
+  line-height: 20px;
+  text-align: left;
+  border-bottom: 2px solid #0b749b;
+}
+#rank {
+  text-align: center;
+}
+#tableContent {
+  font-family: Roboto;
+  font-weight: regular;
+  font-size: 16px;
+  color: #536b7a;
+  word-spacing: 0;
+  line-height: 20px;
+  text-align: left;
+  border-bottom: 1px solid #9aaebb;
+  border-spacing: 10px 10px;
+  padding: 10px;
+}
+
+#moviesTb {
+  border-collapse: collapse;
+  width: 100%;
+}
+#specificContent {
+  margin-bottom: 10px;
+  color: #78849e;
+  font-size: 16px;
+  font-family: Roboto;
+  
+}
+
+/* More details Style */
+#title {
+  margin-bottom: 10px;
+  color: #78849eb9;
+  font-size: 14px;
+  font-family: Roboto;
+}
+#actDirec{
+  display: inline-block;
+  text-align: left;
+}
+#directact{
+  font-size: 16px;
+  color:#00BAFF;
+ text-align: left;
+}
+#moreDetais{
+  padding: 0px 30px 10px 30px;
+}
+.actors{
+  padding-left: 30px;
+}
+#separater{
+  margin-bottom: 15px;
+}

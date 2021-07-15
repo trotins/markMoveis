@@ -1,0 +1,13 @@
+li{
+   list-style: none; 
+}
+ul{
+    padding: 10px 30px 10px 30px;
+}
+li.selectYear{
+    text-align: left;
+    position: relative;
+}
+li.year{
+    padding: 2.5px 24px 2.5px 24px; 
+}

@@ -1,0 +1,35 @@
+#navBar{
+  margin-bottom: 30px;
+}
+
+#rectangule{
+  height: 50px;
+  width: 100%;
+  background-color: #012433;
+}
+#content{
+  vertical-align: middle;
+  padding-left: 25%;
+}
+h1{
+  font-family: Roboto;
+  font-weight: regular;
+  font-size: 24px;
+  color:#386071;
+  word-spacing: 0;
+}
+button{
+  font-family: Roboto;
+  font-weight: light;
+  font-size: 12px;
+  color:#78849E;
+  word-spacing: 0;
+  line-height:14px ;
+  border-radius: 12px;
+  background-color: transparent;
+  padding: 8px; 
+  border-style: solid;
+  border-width: 1px;
+  border-color: #78849E;
+  margin-right: 16px ;
+}

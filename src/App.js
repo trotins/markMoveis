@@ -28,8 +28,8 @@ function App(props) {
     setShowTop10(true);
     setShowTop10Ano(false);
     setColor("");
-    setShowGoBack(false);
     setAno("by Year")
+    setShowGoBack(true);
   };
 
   return (
@@ -55,6 +55,7 @@ function App(props) {
             setAno("by Year");
             setColor("");
             setShowGoBack(false);
+            setShowTop10(false);
             }} />): (<div></div>)}
         </div>
         {showTop10Ano ? (

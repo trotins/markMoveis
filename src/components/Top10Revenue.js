@@ -5,17 +5,18 @@ import Data from "./Data";
 import Details from "./MoreDetails";
 
 export function Top10Revenue() {
-  const [visible, setVisible] = useState(false);
-  const [id, setId] = useState(null);
-  const onClick = (value) => (event) => {
-    setId(value);
-    setVisible(true);
-    
-  };
-const {
-  movies
-} = Data()
-
+    //State onde guarda os dados da API
+    const {movies}=Data();
+    //Dar display/hide ao popup dos detalhes
+    const [visible, setVisible] = useState(false);
+    //Enviar o ID do filme
+    const [id, setId] = useState(null);
+    //Acao de clicar no "eye" que passa o id do filme e da display dos detalhes
+    const onClick = (value) => (event) => {
+      setId(value);
+      setVisible(true);
+    };
+    //Tabela com o top 10 dos filmes com mais revenue
   return (
     <div id="contentTable" className="top10">
       <table id="moviesTb">

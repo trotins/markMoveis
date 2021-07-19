@@ -3,25 +3,34 @@ import eye from "../imgs/Path 11162.svg";
 import "../styles/DataTable.css";
 import Data from "./Data";
 import Details from "./MoreDetails";
+import Search from "./Search";
 
 //http://movie-challenge-api-xpand.azurewebsites.net
 export default function DataTable(props) {
+  //Aceder aos dados da APi
   const { movies } = Data();
+  //Dar display/hide ao popup dos detalhes
   const [visible, setVisible] = useState(false);
+  //Enviar o ID do filme
   const [id, setId] = useState(null);
-  const [search, setSearch] = useState(" ");
+  //Filtrar o texto da input box para o search
+  const [search, setSearch] = useState("");
+  //Acao de clicar no "eye" que passa o id do filme e da display dos detalhes
   const onClick = (value) => (event) => {
     setId(value);
     setVisible(true);
   };
 
-  // tabela com os dados de todos os filmes da API
+  //Filtro para pesquisar os filmes
   let moviesFiltrados = movies.filter((movie) => {
     return movie.title.toLowerCase().indexOf(search) !== -1;
   });
+  
   return (
     <div>
-    <input id="searchBar" type="text" placeholder="Pesquisar Filmes"  onChange={e => setSearch(e.target.value)} />
+      {/* Input de pesquisa dos filmes */}
+      <Search pesquisa = {setSearch} />
+      {/* tabela com os dados de todos os filmes da API */}
       <div id="contentTable" className="data">
         <table id="moviesTb">
           <thead>
@@ -45,11 +54,9 @@ export default function DataTable(props) {
             ))}
           </thead>
         </table>
-
         {/* PopUp com os detalhes especificos do filme */}
         <Details trigger={visible} setTrigger={setVisible} id={id} />
       </div>
-     
     </div>
   );
 }

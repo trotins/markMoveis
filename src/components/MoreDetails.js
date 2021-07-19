@@ -17,20 +17,19 @@ export default function Details(props) {
       )
       .then((res) => {
         setSpecificMovie(res.data);
-        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
   }, [props.id]);
+
   return (
     <div>
-      <PopUp trigger={props.trigger} setTrigger={props.setTrigger}>
-        {/* PopUp Para ver mais detalhes dos filmes */}
+      {/* PopUp para ver mais detalhes dos filmes */}
+      <PopUp trigger={props.trigger} setTrigger={props.setTrigger}>  
         <ul id="moreDetais">
           <h1> {specificMovie.title} </h1>
           <img id="separater" alt="separater" src={separater} />
-
           <li id="title">Year</li>
           <li id="specificContent">{specificMovie.year}</li>
           <li id="title">Genre</li>

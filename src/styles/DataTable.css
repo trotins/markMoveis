@@ -2,7 +2,7 @@
 /* Table com tudo feito */
 #contentTable {
   width: 75%;
-  height: 500px;
+  height: 255px;
   overflow: scroll;
   overflow-x: hidden;
 }

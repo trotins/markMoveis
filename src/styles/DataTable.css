@@ -1,8 +1,8 @@
 
 /* Table com tudo feito */
 #contentTable {
-  width: 75%;
-  height: 255px;
+  width: 70%;
+  height: 510px;
   overflow: scroll;
   overflow-x: hidden;
 }
@@ -19,9 +19,7 @@
   text-align: left;
   border-bottom: 2px solid #0b749b;
 }
-#rank {
-  text-align: center;
-}
+
 #tableContent {
   font-family: Roboto;
   font-weight: regular;
@@ -35,11 +33,22 @@
   padding: 20px;
 }
 
-
 #moviesTb {
   border-collapse: collapse;
   width: 100%;
 }
+
+td{
+  padding: 13px 15px 13px 15px;
+}
+
+th{
+  padding: 10px 15px 0px 15px;
+}
+#rank {
+  text-align: center;
+}
+
 #specificContent {
   margin-bottom: 10px;
   color: #78849e;

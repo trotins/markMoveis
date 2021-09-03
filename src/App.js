@@ -20,6 +20,7 @@ export default function App(props) {
   const [ano, setAno] = useState(null);
   //Mudar a cor de fundo do Top 10 do Ano
   const [color, setColor] = useState("");
+  const [selectedTable, setSelectedTable] = useState("movies");
 
   //onClick do Butao Top 10 Revenue
   const onClick = () => {
@@ -35,7 +36,8 @@ export default function App(props) {
     setAno("by Year")
     //Mostrar o botao para voltar a tras
     setShowGoBack(true);
-  };
+    setSelectedTable("top10Movies");
+    };
   
   return (
     <div id="appContent" className="App">
@@ -49,27 +51,21 @@ export default function App(props) {
             onClick={() => {
               //mostrar o popup com os anos
               setShowPopUp(true);
-              //Mostrar o top 10 revenue dos anos
-              setShowTop10Ano(true);
               //Mudar o estilo do botao para o estilo "Clicked"
               setColor("clicked");
+              setSelectedTable("yearsTable");
             }}
           >
             Top 10 Revenue {ano === null ? "By Year" : ano}
           </button>
           {showGoBack ? (<img id="goBack" alt="goBack" src={goBack} onMouseDown={() => {
-            //Mostra a tabela com os dados dos anos todos 
-            setShowResults(true);
-            //Esconder o Top 10 dos anos 
-            setShowTop10Ano(false);
             //Meter o texto do botao em "by Year"
             setAno("by Year");
             //Retirar o estilo "clicked" 
             setColor("");
             //Esconder o botao para voltar a tras
             setShowGoBack(false);
-            //Esconder o top 10 revenue
-            setShowTop10(false);
+            setSelectedTable("movies");
             }} />): (<div></div>)}
 
         </div>
@@ -78,8 +74,6 @@ export default function App(props) {
             <Years
               goBack = {setShowGoBack}
               anoEscolhido={setAno}
-              resultados={setShowResults}
-              top10={setShowTop10}
               revenueYear={setShowPopUp}
               trigger={showPopUp}
               setTrigger={setShowPopUp}
@@ -88,9 +82,7 @@ export default function App(props) {
         ) : (
           <div></div>
         )}
-
-        {showResults ? <DataTable /> :  <div></div> }
-        {showTop10 ? <Top10Revenue /> : <div> </div>}
+         <DataTable selectedTable={selectedTable} year={ano} />  <div></div> 
       </div>
     </div>
   );

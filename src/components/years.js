@@ -1,28 +1,16 @@
 import "../styles/years.css";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import RevenueYear from "./RevenueYear";
 import PopUp from "./PopUp";
 
 export function Years(props) {
   //Guardar os anos que sao usados na API
   const [years, setYears] = useState([]);
-  //Enviar o ID do filme
-  const [id, setId] = useState(null);
-  //Dar display/hide ao popup dos detalhes
-  const [visible, setVisible] = useState(false);
+  
   //Clicar no botao para quando se clica no ano 
   const onClick = (value) => (event) => {
-    //Passar o Id do filme
-    setId(value);
-    //Mostrar os detalhes
-    setVisible(true);
     //Mostrar o PopUp para escolher os anos  
     props.revenueYear(false);
-    //Mostrar os resultados
-    props.resultados(false);
-    //Esconder a tabela top 10
-    props.top10(false);
     //Mostrar o botao para voltar para traz
     props.goBack(true);
     //Passar o ano escolhido 
@@ -64,12 +52,6 @@ export function Years(props) {
             </ul>
           </div>
         </PopUp>
-       {visible ?  (       
-        <div>
-          {/* Tabela com os dados do ano escolhido */}
-          <RevenueYear year={id} />
-        </div>
-       ):(<div> </div> ) }
     </div>
   );
 }

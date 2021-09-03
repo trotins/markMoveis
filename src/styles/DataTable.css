@@ -49,6 +49,9 @@ th{
   text-align: center;
 }
 
+
+
+/* More details Style */
 #specificContent {
   margin-bottom: 10px;
   color: #78849e;
@@ -56,8 +59,6 @@ th{
   font-family: Roboto;
   
 }
-
-/* More details Style */
 #title {
   margin-bottom: 10px;
   color: #78849eb9;
@@ -83,14 +84,19 @@ th{
   margin-bottom: 15px;
 }
 
-/* SearchBar */
-
-#searchBar{
-  margin-bottom: 1%;
+.infiniteScroll{
   font-family: Roboto;
-  font-size: 15px;
-  color:#78849e;
-  border-radius: 4px;
-  border-width: 1px;
-  border-color: #78849E;
+  font-weight: regular;
+  font-size: 16px;
+  color: #536b7a;
+  word-spacing: 0;
+  line-height: 20px;
+  text-align: left;
+  border-bottom: 1px solid #9aaebb;
+  border-spacing: 10px 10px;
+  padding: 20px;
+  width: 70%;
+  height: 510px;
+  overflow: scroll;
+  overflow-x: hidden;
 }
